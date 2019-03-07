@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/d3.min.js"></script>
+</head>
+
+<body>
+        <p>Apple</p>
+        <p>Pear</p>
+        <p>Banana</p>
+
+        <div>Apple</div>
+        <div>Pear</div>
+        <div>Banana</div>
+
+
+    <script>
+        // D3有一个很独特的功能，能将数据绑定到DOM上，也就是绑定到文档上。
+
+        //D3时通过以下2个函数绑定数据的;
+
+        //1.datum()绑定一个数据到数据集上
+
+
+        var str = "China";
+        var body = d3.select("body");
+        var p = body.selectAll("p");
+
+        p.datum(str);
+
+        p.text(function(d,i){
+            return `第${i}个元素的数据是${d}`
+        });
+
+        // 上面代买用到了一个无名函数 function(d,i).当选择集需要使用绑的数据时，，常需要这么使用
+        // 参数 d 代表数据,也就是与某元素绑定的数据
+        // 参数 i 代表数据的索引号，从0开始
+
+
+
+
+        //2.data() 绑定一个数组带选择集上，数组的各项值分别与选择集的各元素绑定
+
+        var dataset = ["I like dog","I like cat","I like snake"];
+        var div = body.selectAll("div");
+        div.data(dataset)
+            .text(function(d,i){
+                return d;
+            })
+    </script>
+</body>
+
+</html>

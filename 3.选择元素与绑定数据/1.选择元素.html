@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/d3.min.js"></script>
+</head>
+
+<body>
+    <script>
+        d3.select()  //选择指定元素的第一个
+        d3.selectAll() //选择指定元素的全部
+
+        var body = d3.select("body"); //选择文档中的body元素
+        var p1 = body.select("p");      //选择body中的第一个p元素
+        var p = body.selectAll("p");    //选择body中的所有p元素
+        var svg = body.select("svg");   //选择body中的svg元素
+        var rects = svg.selectAll("rect");  //选择svg中所有的svg元素
+    </script>
+</body>
+
+</html>

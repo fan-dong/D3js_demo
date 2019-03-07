@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hello world</title>
     <script src="js/d3.min.js"></script>
 </head>
 <body>
+    <p>Cat</p>
+    <p>Dog</p>
     
+
+    <script>
+
+         //原生js
+        // var ps = document.getElementsByTagName("p");
+        // for (let index = 0; index < ps.length; index++) {
+        //     let p = ps.item(index);
+        //     p.innerHTML = "Hello world"
+            
+        // }
+
+
+        // d3.js
+        // d3.select("body")
+        //     .selectAll("p")
+        //     .text("Hello World");
+
+        let p = d3.select("body")
+                    .selectAll("p")
+                    .text("Hello Fred!")
+        p.style('color', 'blue');
+        p.style('font-size',"72px");
+    </script>
 </body>
 </html>

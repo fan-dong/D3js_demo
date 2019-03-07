@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>append</title>
+    <script src="../js/d3.min.js"></script>
+</head>
+
+<body>
+
+    <p class="myclass">append():在选择集末尾插入元素</p>
+    <p class="myclass">insert(): 在在选择集前面插入元素</p>
+    <p class="myclass">remove(): 删除元素</p>
+    <br>
+    <div id="myid">myid</div>
+
+    <script>
+        //append
+        let body = d3.select("body");
+        body.append("p")
+            .text("append p element");
+              
+            
+        //insert
+        body.insert("p","#myid")
+            .text("insert p elment");
+
+
+        //remove  删除元素
+        let p = body.select("#myid");
+        p.remove();
+    </script>
+</body>
+
+</html>

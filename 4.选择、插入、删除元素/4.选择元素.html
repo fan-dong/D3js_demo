@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/d3.min.js"></script>
+</head>
+
+<body>
+    <h1>选择后两个P元素</h1>
+    <p>Apple</p>
+    <p class="myclass">Banana</p>
+    <p class="myclass">Banana</p>
+
+    <script>
+        let body = d3.select("body");
+        let p = body.selectAll(".myclass");
+        p.style('color','blue')
+                    
+    </script>
+</body>
+
+</html>
